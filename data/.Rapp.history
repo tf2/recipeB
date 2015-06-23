@@ -1,0 +1,1087 @@
+hist(len,200)
+cut = median(len)+(mad(len)*2)#
+#
+nov = NULL#
+u= unique(dd[,1])#
+len = NULL#
+r = NULL#
+noi = NULL#
+check = NULL#
+ids  = NULL#
+for(x in 1:length(u)) {#
+	ddd = dd[as.character(dd[,1])==as.character(u[x]),]#
+	if(length(ddd[,1])<cut) {#
+		len = c(len, length(ddd[ddd$adjw_score>(0.4+(ddd[1,3]/5)),1]))#
+		r = rbind(r, ddd)#
+		noi = c(noi, ddd[1,3])#
+		pl = ddd[ddd$adjw_score>(0.4+(ddd[1,3]/5)),]#
+		no = 1-(length(pl[pl$common_forward >0.8 | pl$common_backward>0.5,1])/length(pl[,1]))#
+		n = median(pl$number_probes)/length(pl[,1])#
+		check=c(check, n)#
+		nov = c(nov, no)#
+		ids = c(ids, as.character(u[x]))#
+	}#
+}
+hist(nov)
+hist(nov,200)
+hist(len,200)
+hist(noi)
+hist(noi,200)
+plot(len,noi)
+nov = NULL#
+u= unique(dd[,1])#
+len = NULL#
+r = NULL#
+noi = NULL#
+check = NULL#
+ids  = NULL#
+for(x in 1:length(u)) {#
+	ddd = dd[as.character(dd[,1])==as.character(u[x]),]#
+	if(length(ddd[,1])<cut) {#
+		#len = c(len, length(ddd[ddd$adjw_score>(0.4+(ddd[1,3]/5)),1]))#
+		len = c(len, length(ddd[,1]))#
+		r = rbind(r, ddd)#
+		noi = c(noi, ddd[1,3])#
+		pl = ddd[ddd$adjw_score>(0.4+(ddd[1,3]/5)),]#
+		no = 1-(length(pl[pl$common_forward >0.8 | pl$common_backward>0.5,1])/length(pl[,1]))#
+		n = median(pl$number_probes)/length(pl[,1])#
+		check=c(check, n)#
+		nov = c(nov, no)#
+		ids = c(ids, as.character(u[x]))#
+	}#
+}
+plot(len,noi)
+histlen
+hist(len,200)
+summary(len)
+length(len)
+length(unique(d[,1]))
+292/454
+con = read.table("control_file_UKBS_Scottish_meeting11122011.txt")
+con[1,]
+con = read.table("control_file_UKBS_Scottish_meeting11122011.txt", header=T)
+t = table(con$sanger_id)
+t
+hist(t,200)
+l = c(t, len)
+l
+hist(l,200)
+den1 = density(len)
+plot(den1)
+den1 = density(t)
+plot(den1)
+hist(l,200)#
+	plot(den1)#
+	den1 = density(t)#
+	plot(den1)#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	den1 = density(len)#
+	fac = f*(1/max(abs(l)))#
+	matplot(den1$x,den1$y*fac,col="blue", type="l",add=T)
+h = hist(l, 200)#
+	f = max(h$counts)#
+	den1 = density(len)#
+	fac = f*(1/max(abs(l)))#
+	matplot(den1$x,den1$y*fac,col="blue", type="l",add=T)
+fac
+f
+h = hist(l, 200)#
+	f = max(h$counts)#
+	den1 = density(len)#
+	fac = f*(1/max(abs(len)))#
+	matplot(den1$x,den1$y*fac,col="blue", type="l",add=T)
+den1
+h = hist(l, 200)#
+	f = max(h$counts)#
+	den1 = density(len)#
+	#fac = f*(1/max(abs(len)))#
+	matplot(den1$x,den1$y*f,col="blue", type="l",add=T)
+h = hist(l, 200)#
+	f = max(h$counts)#
+	den1 = density(len)#
+	#fac = f*(1/max(abs(len)))#
+	matplot(den1$x,den1$y*f*10,col="blue", type="l",add=T)
+h = hist(l, 200)#
+	f = max(h$counts)#
+	den1 = density(len)#
+	#fac = f*(1/max(abs(len)))#
+	matplot(den1$x,den1$y*f*10,col="blue", type="l",add=T)0
+h = hist(l, 200)#
+	f = max(h$counts)#
+	den1 = density(len)#
+	#fac = f*(1/max(abs(len)))#
+	matplot(den1$x,den1$y*f*100,col="blue", type="l",add=T)
+x = l#
+den = denisty(x)#
+#
+	h = hist(x, n/3)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x,n/3)#
+	matplot(den$x,m$y*fac,type="l", col="red", add=T)
+x = l#
+den = density(x)#
+#
+	h = hist(x, n/3)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x,n/3)#
+	matplot(den$x,m$y*fac,type="l", col="red", add=T)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x,n/3)#
+	matplot(den$x,m$y*fac,type="l", col="red", add=T)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200)#
+	matplot(den$x,m$y*fac,type="l", col="red", add=T)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200)#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T)
+hist(t, 200)
+hist(len, 200, col="red", add=T)
+hist(t, 200, col="green")
+hist(len, 200, col="red", add=T)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200)#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T)#
+	den = density(len)#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T)#
+	den = density(t)#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200)#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T)#
+	den = density(len)#
+	h = hist(len, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T)#
+	den = density(t)#
+	h = hist(t, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200)#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T)#
+	den = density(len)#
+	h = hist(len, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200)#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="Number Detections", main="")#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"))
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="Number Detections", main="")#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), pch="-", lty=1)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="Number Detections", main="")#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+noi
+con[1,]
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="Number Detections", main="")#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="# Detections per sample", main="Patients vs. Controls")#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="# Detections per sample", main="Patients vs. Controls")#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="# Detections per sample", main="Patients vs. Controls", xlim=c(0,500))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x[x<400], 200, xlab="# Detections per sample", main="Patients vs. Controls", xlim=c(0,500))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x[x<400], 200, xlab="# Detections per sample", main="Patients vs. Controls", xlim=c(0,400))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="# Detections per sample", main="", xlim=c(0,400))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = l#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="# Detections per sample", main="")#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(len)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(t)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+dir()
+s = read.table("scottish_call_info_version1.txt")
+hist(d[,3],200)
+hist(d[,3],200, xlim=c(0.1,0.3))
+hist(d[,3],2000, xlim=c(0.1,0.3))
+cq = read.table("control_dlrs.txt")
+cq
+hist(cq[,1])
+cq = cq[cq<0.3]
+qq = unqiue(d[,3])
+qq = unique(d[,3])
+qq
+qq = qq[qq<0.3]
+hist(cq[,1], 200)
+hist(cq, 200)
+hist(cq, 200, col="blue")
+hist(qq, 200, col="green", add=T)
+hist(cq, 200, col="blue")
+hist(qq, 20000, col="green", add=T)
+hist(cq, 200, col="blue")
+hist(qq, 2000, col="green", add=T)
+hist(cq, 200, col="blue")
+hist(qq, 500, col="green", add=T)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="# Detections per sample", main="Patients vs. Controls")#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="dLRs", main="", xlim=c(0.1,0.3))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 500)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 500, xlab="dLRs", main="", xlim=c(0.1,0.3))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 400)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 400, xlab="dLRs", main="", xlim=c(0.1,0.3))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 400, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 400, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 450)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 450, xlab="dLRs", main="", xlim=c(0.1,0.3))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 450, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 450, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 400)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 400, xlab="dLRs", main="", xlim=c(0.1,0.3))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 400, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 400, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+length(l)
+length(cq)
+length(t)
+length(cq)/2
+ccq = cq
+cq=cq[runif(length(t))]
+hist(cq)
+hist(cq,200)
+cp
+cq
+cq=ccq[round(runif(length(t), 1, length(t)))]
+cq
+hist(cq)
+hist(cq,200)
+hist(cq,300)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 200)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 200, xlab="dLRs", main="", xlim=c(0.1,0.3))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 200, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 300)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 300, xlab="dLRs", main="", xlim=c(0.1,0.3))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 300, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 300, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 350)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 350, xlab="dLRs", main="", xlim=c(0.1,0.3))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 350, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 350, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 450)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 450, xlab="dLRs", main="", xlim=c(0.1,0.3))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 450, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 450, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 350)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 350, xlab="dLRs", main="", xlim=c(0.1,0.3))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 350, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 350, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+con
+con[1,]
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		len1[x] = length(ddd[ddd[,6]>0,1])#
+		len2[x] = length(ddd[ddd[,6]<0,1])#
+	}
+summary(len1)
+summary(len2)
+summary(con)
+unique(con[,3])
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,1]#
+		d2 = ddd[ddd[,6]<0,1]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_del==0 | d1$novelty_dup==0 | d1$novelty_com==0,1])/length(d1[,1])#
+	}
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_del==0 | d1$novelty_dup==0 | d1$novelty_com==0,1])/length(d1[,1])#
+	}
+nov1
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_del==0 & d1$novelty_com==0,1])/length(d1[,1])#
+	}
+nov1
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_dup==0 | d1$novelty_com==0,1])/length(d1[,1])#
+	}
+nov1
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_dup==0 & d1$novelty_com==0,1])/length(d1[,1])#
+	}
+nov1
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_dup>0 | d1$novelty_com>0,1])/length(d1[,1])#
+	}
+nov1
+hist(nov1)
+hist(nov1,200)
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[1$novelty_del>0 | d1$novelty_dup>0 | d1$novelty_com>0,1])/length(d1[,1])#
+	}
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_del>0 | d1$novelty_dup>0 | d1$novelty_com>0,1])/length(d1[,1])#
+	}
+nov1
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_dup>0.8 | d1$novelty_com>0.8,1])/length(d1[,1])#
+	}
+nov1
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_dup>0.8 | d1$novelty_com>0.8,1])/length(d1[,1])#
+	}
+nov1
+con[1,]
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_dup==100 & d1$novelty_com==100,1])/length(d1[,1])#
+	}
+nov1
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_del==100 & d1$novelty_dup==100 & d1$novelty_com==100,1])/length(d1[,1])#
+	}
+nov1
+hist(nov1)
+hist(nov1,200)
+u = unique(con$sanger_id)#
+	len1 = vector()#
+	len2 = vector()#
+	nov1 = vector()#
+	nov2 = vector()#
+	for(x in 1:length(u)) {#
+		ddd = con[as.character(con[,2])==as.character(u[x]),]#
+		d1 = ddd[ddd[,6]>0,]#
+		d2 = ddd[ddd[,6]<0,]#
+		len1[x] = length(d1[,1])#
+		len2[x] = length(d2[,1])#
+		nov1[x] = length(d1[d1$novelty_del==100 & d1$novelty_dup==100 & d1$novelty_com==100,1])/length(d1[,1])#
+	}
+write.table(d, file="patiet.txt", sep="\t", row.names=F, quote=F)
+write.table(con, file="contrl.txt", sep="\t", row.names=F, quote=F)
+x = c(cq, qq)#
+den = density(x)#
+#
+	h = hist(x, 350)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	hist(x, 350, xlab="dLRs", main="", xlim=c(0.1,0.3))#
+	matplot(den$x,den$y*fac,type="l", col="red", add=T, lwd=2)#
+	den = density(qq)#
+	h = hist(len, 350, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="green", add=T, lwd=2)#
+	den = density(cq)#
+	h = hist(t, 350, plot=F)#
+	f = max(h$counts)#
+	fac = f*(1/max(abs(den$y)))#
+	matplot(den$x,den$y*fac,type="l", col="blue", add=T, lwd=2)#
+	legend("topright", c("All", "Controls", "Patients"), col=c("red", "blue", "green"), lty=1)
+con = read.table("contrl.txt", header=T)
+d = read.table("patiet.txt", header=T)
+qq = unique(d[,3])
+qq = qq[qq<0.3]
+cq = read.table("control_dlrs.txt")
+12000/95
+log10(100000)
+log10(200000)
+log10(1000000)
+install.packages("RMySQL")
+c2 = (0,2,3)
+c2 = c(0,2,3)
+c1 = c(0,2,5)
+max(c1,c2)
+65*5
+220/100
+2.2*81
+177/100
+1.77*81
+1510/2
+min(1,2)
+375/755
+0/1
+d = read.table("ids.txt")
+d
+length(d[,1])
+length(unique(d[,1]))
+109/380
+d = read.table("chrX_control_variants.txt")
+dd = d[,-(1:2)]
+summary(dd)
+dd=dd[order(dd[,1], dd[,2], dd[,3]),]
+library(recipeB)
+o = coverlap(dd, 0, 0)
+o = coverlap(dd, dd, 0, 0)
+summary(o)
+hist(o$ccon,200)
+o = coverlap(dd, dd, 0.99, 0.99)
+hist(o$ccon,200)
+bed = cbind("chrX", dd[,2:3])
+write.table(bed, file="control_chrX.bed", sep="\t", row.names=F, col.names=F, quote=F)
+p = read.table("chrX_patient_variants.txt", header=T)
+p[1,]
+pp = p[,-(1)]
+o = coverlap(pp, dd)
+summary(o)
+length(pp[,1])
+length(pp[pp$rr1<0.8,1])
+length(o[o$rr1<0.8,1])
+summary(o[o$rr1<0.8,])
+pp = cbind(p[,-(1)], p[,1])
+o = coverlap(pp, dd, 0, 0)
+o = roverlap(pp, dd)
+summary(o)
+dim(o)
+oo = o[o[,39]<0.8,]
+summary(oo)
+t = table(oo[,38])
+t
+hist(t)
+hist(t,200)
+summary(oo)
+rbreak
+dd
+type = dd[,1]
+type[dd[,4]>0] = 1
+type[dd[,4]<0] = -1
+type
+cbind(type, dd[,4])
+my = cbind(dd[,1:3], 1, 0, type, 4)
+write.table(my, file="chrX_detections.txt", sep="\t", row.names=F, col.names=F, quote=F)
+dir()
+rbreak("DDD_plus_chrX.txt", studies=c(4),samplesizes=c(845), sensitivities=c(1))
+tovelap
+toverlap
+p
+set2 = read.table("DDD_plus_chrX.out")
+rarecommon = 0.01 #
+    sep = T#
+    classover <- function(set1, set2) {#
+        r = NULL#
+        si1 = length(set1[, 1])#
+        si2 = length(set2[, 1])#
+        set1 = set1[set1[, 2] <= set1[, 3], ]#
+        set2 = set2[set2[, 2] <= set2[, 3], ]#
+        if (si1 > length(set1[, 1]) | si2 > length(set2[, 1])) {#
+            warning("i removed some rubbish rows - where start was larger then stop!")#
+        }#
+        if (length(set1) > 0 & length(set2) > 0) {#
+            set1 = set1[order(set1[, 1], set1[, 2], set1[, 3]), #
+                ]#
+            set2 = set2[order(set2[, 1], set2[, 2], set2[, 3]), #
+                ]#
+            u = unique(set1[, 1])#
+            for (x in 1:length(u)) {#
+                s1 = set1[as.character(set1[, 1]) == u[x], ]#
+                s2 = set2[as.character(set2[, 1]) == u[x], ]#
+                r1 = vector(length = length(s1[, 1]))#
+                r2 = vector(length = length(s1[, 1]))#
+                if (length(s1) > 0 & length(s2) > 0) {#
+                  if (is.null(dim(s1))) {#
+                    s1 = rbind(s1, s1)#
+                  }#
+                  if (is.null(dim(s2))) {#
+                    s2 = rbind(s2, s2)#
+                  }#
+                  res <- .C("toverlap", a = as.integer(s1[, 2]), #
+                    b = as.integer(s1[, 3]), c = as.integer(s2[, #
+                      2]), d = as.integer(s2[, 3]), r1 = as.double(r1), #
+                    r2 = as.double(r2), size1 = as.integer(length(s1[, #
+                      1])), size2 = as.integer(length(s2[, 2])), #
+                    PACKAGE = "recipeB")#
+                  r = rbind(r, cbind(res$r1, res$r2))#
+                }#
+                else {#
+                  r = rbind(r, cbind(r1, r2))#
+                }#
+            }#
+            rset = cbind(set1, r)#
+            return(rset)#
+        }#
+        else {#
+            warning("everything was rubbish rows - where start was larger then stop!")#
+        }#
+    }
+set1 = p
+p[1,]
+set1 = pp
+pp[1,]
+rare_del = set2[set2[, 11] < rarecommon & set2[, 13] <= 0, #
+        ]#
+    common_del = set2[set2[, 11] >= rarecommon & set2[, 13] <= #
+        0, ]#
+    rare_dup = set2[set2[, 11] < rarecommon & set2[, 13] >= 0, #
+        ]#
+    common_dup = set2[set2[, 11] >= rarecommon & set2[, 13] >= #
+        0, ]#
+    dels = NULL#
+    if (length(set1[set1[, 4] < 0, 1]) > 0) {#
+        rdels = classover(set1[set1[, 4] < 0, ], rare_del)#
+        cdels = classover(set1[set1[, 4] < 0, ], common_del)#
+        len = length(cdels[1, ]) - 1#
+        dels = cbind(rdels, cdels[, len:length(cdels[1, ])])#
+    }#
+    dups = NULL#
+    if (length(set1[set1[, 4] > 0, 1]) > 0) {#
+        rdups = classover(set1[set1[, 4] > 0, ], rare_dup)#
+        cdups = classover(set1[set1[, 4] > 0, ], common_dup)#
+        len = length(cdups[1, ]) - 1#
+        dups = cbind(rdups, cdups[, len:length(cdups[1, ])])#
+    }#
+    dat = rbind(dels, dups)#
+    dat = dat[order(dat[, 1], dat[, 2], dat[, 3]), ]
+set2
+library(recipeB)
+rare_del = set2[set2[, 11] < rarecommon & set2[, 13] <= 0, #
+        ]#
+    common_del = set2[set2[, 11] >= rarecommon & set2[, 13] <= #
+        0, ]#
+    rare_dup = set2[set2[, 11] < rarecommon & set2[, 13] >= 0, #
+        ]#
+    common_dup = set2[set2[, 11] >= rarecommon & set2[, 13] >= #
+        0, ]#
+    dels = NULL#
+    if (length(set1[set1[, 4] < 0, 1]) > 0) {#
+        rdels = classover(set1[set1[, 4] < 0, ], rare_del)#
+        cdels = classover(set1[set1[, 4] < 0, ], common_del)#
+        len = length(cdels[1, ]) - 1#
+        dels = cbind(rdels, cdels[, len:length(cdels[1, ])])#
+    }#
+    dups = NULL#
+    if (length(set1[set1[, 4] > 0, 1]) > 0) {#
+        rdups = classover(set1[set1[, 4] > 0, ], rare_dup)#
+        cdups = classover(set1[set1[, 4] > 0, ], common_dup)#
+        len = length(cdups[1, ]) - 1#
+        dups = cbind(rdups, cdups[, len:length(cdups[1, ])])#
+    }#
+    dat = rbind(dels, dups)#
+    dat = dat[order(dat[, 1], dat[, 2], dat[, 3]), ]
+m = read.table("CNV_consensus_all_studies_separate_merge_withDDX_13062012.txt")
+cnv2.1_separate_plusX = m
+save(cnv2.1_separate_plusX, file="cnv2.1_separate_plusX.RData")
+data(cnv2.1_separate)
+length(cnv2.1_separate[,1])
+length(cnv2.1_separate_plusX[,1])
+summary(cnv2.1_separate)
+unique(cnv2.1_separate[,15])
+unique(cnv2.1_separate_plusX[,15])
+summary(cnv2.1_separate)
+cnv2.1_separate_plusX=cnv2.1_separate_plusX[order(cnv2.1_separate_plusX[,1], cnv2.1_separate_plusX[,2], cnv2.1_separate_plusX[,3]),]
+save(cnv2.1_separate_plusX, file="cnv2.1_separate_plusX.RData")

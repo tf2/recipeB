@@ -1,0 +1,11 @@
+Package: recipeB
+Type: Package
+Title: Reciprocal Overlap Stuff
+Version: 1.0
+Date: 2012-01-09
+Author: Tomas William Fitzgerald
+Maintainer: <tf2@sanger.ac.uk>
+Depends:
+Description: Fast method for feature overlaps
+License: Artistic
+Packaged: 2012-05-28 15:57:08 UTC; tf2
